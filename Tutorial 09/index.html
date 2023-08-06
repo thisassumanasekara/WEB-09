@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excersie 01</title>
+</head>
+<body>
+    <button onclick="getDayOfWeek()">Get Day of the Week</button>
+
+    <script>
+        function getDayOfWeek() {
+           
+            const inputNumber = prompt("Enter a number from 1 to 7:");
+
+            
+            const dayNumber = parseInt(inputNumber);
+
+            
+            if (isNaN(dayNumber) || dayNumber < 1 || dayNumber > 7) {
+                alert("Invalid input. Please enter a valid number from 1 to 7.");
+                return;
+            }
+            const daysOfWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"];
+            const dayOfWeek = daysOfWeek[dayNumber - 1];
+
+            alert(`The day corresponding to number ${dayNumber} is ${dayOfWeek}.`);
+        }
+    </script>
+</body>
+</html>

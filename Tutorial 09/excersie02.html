@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Excersie 02</title>
+</head>
+<body>
+    <button id="googleButton">Google</button>
+
+    <script>        
+        const googleButton = document.getElementById('googleButton');
+        googleButton.addEventListener('click', redirectToGoogle);
+
+        
+        function redirectToGoogle() {            
+            const choice = confirm("Do you want to redirect to Google?");            
+            if (choice) {                
+                window.location.href = "https://www.google.com";
+            } else {                
+                alert("You decided to stay.");
+            }
+        }
+    </script>
+</body>
+</html>
